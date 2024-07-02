@@ -24,12 +24,27 @@ export default function App(){
     })
   }
 
+  function toggletodo(id, completed){
+    setTodo(currentTodos => {// since the todolist cant be changed, we need to re-setTodo with the new value
+      return currentTodos.map(todo => { // .map returns an array, so we basically gonna loop through each item in the currentTodos and replace their position with something or return something
+        if(todo.id === id){
+          // here after our condition, if it meets the condition, we return the todo(which is a dictionary)
+          // remember we cant change the value directly so we must have to take the aproach above
+          return {...todo, completed} // here the second parameter is the key we want to change
+        }
+
+        return todo
+      })
+    })
+    console.log('hi')
+  }
+
 
   return (
     <>
     <h1>Your Todo List</h1>
     <TodoTextBox onSubmit={addTodo}/> {/* sends the addTodo function to the components, this are known as prompts */}
-    <TodoList todos={todolist}/>
+    <TodoList todos={todolist} toggletodo={toggletodo}/>
     </>
   )
 }
