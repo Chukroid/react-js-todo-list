@@ -36,7 +36,12 @@ export default function App(){
         return todo
       })
     })
-    console.log('hi')
+  }
+
+  function deletetodo(id){
+    setTodo(currentTodos =>{
+      return currentTodos.filter(todo => todo.id !== id) // it will only allow todos that their ids are different from the current id
+    })
   }
 
 
@@ -44,7 +49,7 @@ export default function App(){
     <>
     <h1>Your Todo List</h1>
     <TodoTextBox onSubmit={addTodo}/> {/* sends the addTodo function to the components, this are known as prompts */}
-    <TodoList todos={todolist} toggletodo={toggletodo}/>
+    <TodoList todos={todolist} toggletodo={toggletodo} deletetodo={deletetodo}/>
     </>
   )
 }
