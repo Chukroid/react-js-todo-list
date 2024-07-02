@@ -8,6 +8,8 @@ export default function TodoTextBox({ onSubmit }){
         if (newitem === "") return 
 
         onSubmit(newitem)
+
+        setNewItem("")
     }
 
     return(
