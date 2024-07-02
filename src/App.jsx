@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import TodoTextBox from "./components/TodoTextbox";
+import TodoList from "./components/TodoList";
 
 export default function App(){
   const [todolist,setTodo] = useState(() => {
@@ -14,11 +15,11 @@ export default function App(){
   },[todolist])// the second argument is an array of all the objects we want the useeffect to detect changes on
 
 
-  function addTodo(title){
+  function addTodo(titleval){
     setTodo(currentTodos => {
       return [
         ...currentTodos, //create a copy of todo
-        {id: crypto.randomUUID(), title, completed: false}
+        {id: crypto.randomUUID(), title: titleval, completed: false}
       ]
     })
   }
@@ -28,23 +29,7 @@ export default function App(){
     <>
     <h1>Your Todo List</h1>
     <TodoTextBox onSubmit={addTodo}/> {/* sends the addTodo function to the components, this are known as prompts */}
-    <ul>
-      <li>
-        <label>TODO Name</label>
-        <input type="checkbox"/>
-        <button>Delete</button>
-      </li>
-      <li>
-        <label>TODO Name</label>
-        <input type="checkbox"/>
-        <button>Delete</button>
-      </li>
-      <li>
-        <label>TODO Name</label>
-        <input type="checkbox"/>
-        <button>Delete</button>
-      </li>
-    </ul>
+    <TodoList todos={todolist}/>
     </>
   )
 }
