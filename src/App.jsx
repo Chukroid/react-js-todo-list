@@ -47,6 +47,7 @@ export default function App(){
 
   return (
     <>
+    <h1 className="creator">Made by Chukroid</h1>
     <div className="main-wrapper">
       <TodoTextBox onSubmit={addTodo}/> {/* sends the addTodo function to the components, this are known as prompts */}
       <div className="line"></div>
