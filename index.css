@@ -4,6 +4,7 @@
     --textcolor: #ffffff;
     --gray: #2c2c2c;
     --lightgray: #4b4b4b;
+    --red: #ff6a6a;
 }
 
 body {
@@ -90,9 +91,67 @@ body {
 }
 
 .line {
-    margin: 20px 0px;
-    height: 1.5px;
+    margin: 10px 0px;
+    height: 1px;
     border-radius: 100px;
     background-color: var(--darkGray);
     opacity: 0.3;
+}
+
+.todo-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.todo-item {
+    flex-flow: row;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-weight: 100;
+    padding: 1px 0;
+}
+.todo-item > label {
+    width: 100%;
+}
+.todo-completed {
+    margin: 0;
+    height: 21px;
+    width: 23px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    border: 1px solid var(--darkGray);
+    border-radius: 3px;
+    outline: none;
+    background-color: var(--lightgray);
+    cursor: pointer;
+}
+.todo-completed:checked {
+    background: url(images/tick.png);
+    background-size: 70% 60%;
+    background-position: center;
+    background-color: var(--purple);
+    background-repeat: no-repeat;
+}
+.striked {
+    text-decoration: line-through;
+    color: var(--lightgray);
+}
+.todo-delete {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+.todo-delete > i {
+    font-size: large;
+    color: var(--lightgray);
+}
+.todo-delete > i:hover {
+    color: var(--red);
 }
