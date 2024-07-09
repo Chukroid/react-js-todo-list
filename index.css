@@ -3,6 +3,7 @@
     --darkGray: #1b1b1b;
     --textcolor: #ffffff;
     --gray: #2c2c2c;
+    --lightgray: #4b4b4b;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
     padding-left: 0px;
     background-color: hsla(0, 0.00%, 10.67%, 1.00);
     font-weight: 600;
+    width: 50%;
 }
 .main-wrapper {
     text-align: left;
@@ -37,28 +39,60 @@ body {
     display: flex;
     position: static;
     box-shadow: -5px 2px 7px -4px rgba(0, 0, 0, .2);
+    width: 100%;
 }
 
 
 .form-wrapper {
-    flex-flow: column;
     padding-top: 0;
-    display: flex;
     position: static;
 }
 .todo-form-description {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
     background-color: #252525;
     border: 2px solid rgba(26,26,26,.16);
     border-radius: 5px;
     line-height: 20px;
     color: var(--textcolor);
-    padding: 3% ;
-    font-family: inherit;
+    padding: 7px 13px;
+    margin-bottom: 15px;
 }
-.todo-form-description:focus {
-    border-color: rgba(108, 99, 255, 0) rgba(108, 99, 255, 0) var(--purple);
-    border-bottom-style: solid;
+.todo-form-description > input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    line-height: 20px;
+    color: var(--textcolor);
+    font-family: inherit;
+    width: 100%;
+}
+.todo-form-description > i {
+    color: var(--lightgray);
 }
 .todo-form-description::placeholder {
     color: #4b4b4b;
+}
+.todo-form-description > input:focus {
+    outline: none;
+    border-color: rgba(108, 99, 255, 0) rgba(108, 99, 255, 0) var(--purple);
+    border-bottom-style: solid;
+    border-radius: 5px;
+}
+.form-wrapper > button {
+    background: var(--purple);
+	color: inherit;
+	border: none;
+	padding: 0.5rem 0.9rem;
+	font: inherit;
+	cursor: pointer;
+    border-radius: 5px;
+}
+
+.line {
+    margin: 20px 0px;
+    height: 1.5px;
+    border-radius: 100px;
+    background-color: var(--darkGray);
+    opacity: 0.3;
 }

@@ -20,7 +20,7 @@ export default function TodoTextBox({ onSubmit }){
                 <i class="bi bi-body-text"></i>
                 <input placeholder="Add a new Todo..." type="text" id="item" value={newitem} onChange={e => setNewItem(e.target.value)}/>
             </div>
-            <button className="todo-form-create">CREATE</button>
+            <button>ADD TODO</button>
         </form>
         </>
     )
