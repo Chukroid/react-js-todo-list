@@ -1,0 +1,64 @@
+:root {
+    --purple: #6c63ff;
+    --darkGray: #1b1b1b;
+    --textcolor: #ffffff;
+    --gray: #2c2c2c;
+}
+
+body {
+    color: var(--textcolor);
+    -webkit-text-fill-color: inherit;
+    background-color: var(--darkGray);
+    padding: 29px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    display: flex;
+}
+#root {
+    margin: auto;
+    display: flex;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    background-color: hsla(0, 0.00%, 10.67%, 1.00);
+    font-weight: 600;
+}
+.main-wrapper {
+    text-align: left;
+    background-color: var(--gray);
+    border-radius: 8px;
+    flex-flow: column;
+    flex: 0 auto;
+    margin: 20px auto;
+    padding: 20px 40px;
+    display: flex;
+    position: static;
+    box-shadow: -5px 2px 7px -4px rgba(0, 0, 0, .2);
+}
+
+
+.form-wrapper {
+    flex-flow: column;
+    padding-top: 0;
+    display: flex;
+    position: static;
+}
+.todo-form-description {
+    background-color: #252525;
+    border: 2px solid rgba(26,26,26,.16);
+    border-radius: 5px;
+    line-height: 20px;
+    color: var(--textcolor);
+    padding: 3% ;
+    font-family: inherit;
+}
+.todo-form-description:focus {
+    border-color: rgba(108, 99, 255, 0) rgba(108, 99, 255, 0) var(--purple);
+    border-bottom-style: solid;
+}
+.todo-form-description::placeholder {
+    color: #4b4b4b;
+}

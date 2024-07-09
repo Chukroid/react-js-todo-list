@@ -14,11 +14,13 @@ export default function TodoTextBox({ onSubmit }){
 
     return(
         <>
-        <form onSubmit={handlesubmit}>
-            <label htmlFor="item">Add new Todo</label>
+        <form onSubmit={handlesubmit} className="form-wrapper">
             {/*setting the value of the textbox to newitem and setting its change event to the setnewitem function */}
-            <input type="text" id="item" value={newitem} onChange={e => setNewItem(e.target.value)}/>
-            <button>ADD</button>
+            <div className="todo-form-description">
+                <i class="bi bi-body-text"></i>
+                <input placeholder="Add a new Todo..." type="text" id="item" value={newitem} onChange={e => setNewItem(e.target.value)}/>
+            </div>
+            <button className="todo-form-create">CREATE</button>
         </form>
         </>
     )

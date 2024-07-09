@@ -47,9 +47,11 @@ export default function App(){
 
   return (
     <>
-    <h1>Your Todo List</h1>
-    <TodoTextBox onSubmit={addTodo}/> {/* sends the addTodo function to the components, this are known as prompts */}
-    <TodoList todos={todolist} toggletodo={toggletodo} deletetodo={deletetodo}/>
+    <div className="main-wrapper">
+      <TodoTextBox onSubmit={addTodo}/> {/* sends the addTodo function to the components, this are known as prompts */}
+      <div className="line"></div>
+      <TodoList todos={todolist} toggletodo={toggletodo} deletetodo={deletetodo}/>
+    </div>
     </>
   )
 }
