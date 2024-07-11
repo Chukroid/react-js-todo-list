@@ -14,7 +14,7 @@
 body {
     color: var(--textcolor);
     -webkit-text-fill-color: inherit;
-    background-color: var(--darkGray);
+    background-image: radial-gradient(circle,var(--lightgray), var(--darkerGray));
     padding: 29px;
     font-family: Montserrat, sans-serif;
     font-size: 14px;
@@ -40,7 +40,7 @@ body {
     text-align: center;
     font-size: medium;
     margin-bottom: 5%;
-    color: #4b4b4b;
+    color: inherit;
 }
 .main-wrapper {
     text-align: left;
@@ -51,7 +51,7 @@ body {
     padding: 40px 40px;
     display: flex;
     position: static;
-    box-shadow: -5px 2px 7px -4px rgba(0, 0, 0, .2);
+    box-shadow: -7px -5px 7px -4px rgba(0, 0, 0, .5);
     width: 100%;
 }
 
@@ -80,6 +80,9 @@ body {
 }
 .top-part > select:hover {
     background-color: var(--darkerpurple);
+}
+.top-part > select > option {
+    background-color: var(--darkGray);
 }
 .todo-form-description {
     display: flex;
