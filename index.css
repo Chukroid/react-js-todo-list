@@ -78,6 +78,9 @@ body {
     font-family: inherit;
     outline: none;
 }
+.top-part > select:hover {
+    background-color: var(--darkerpurple);
+}
 .todo-form-description {
     display: flex;
     align-items: center;
