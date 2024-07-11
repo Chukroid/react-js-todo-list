@@ -223,4 +223,10 @@ body {
 }
 .todo-delete > i:hover {
     color: var(--red);
+    rotate: 45deg;
+}
+.todo-delete:hover {
+    rotate: -20deg;
+    scale: 1.2;
+    transition: all 0.2s;
 }
