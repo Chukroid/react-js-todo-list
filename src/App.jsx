@@ -8,6 +8,12 @@ export default function App(){
     if (storagevalue == null) return []
     return JSON.parse(storagevalue)
   }) //gets the todolist which is the input text and the setnewitem function to be called to set it
+  const tagList = [
+    {value:"personal",Text:"Personal"},
+    {value:"work",Text:"Work"},
+    {value:"school",Text:"School"},
+    {value:"hobby",Text:"Hobby"},
+  ]
 
 
   useEffect(() => { // anytime the todolist updates, it should automatically update the local storage 
@@ -15,11 +21,11 @@ export default function App(){
   },[todolist])// the second argument is an array of all the objects we want the useeffect to detect changes on
 
 
-  function addTodo(titleval){
+  function addTodo(titleval, tagval){
     setTodo(currentTodos => {
       return [
         ...currentTodos, //create a copy of todo
-        {id: crypto.randomUUID(), title: titleval, completed: false}
+        {id: crypto.randomUUID(), title: titleval, completed: false, tag: tagval}
       ]
     })
   }
@@ -49,9 +55,9 @@ export default function App(){
     <>
     <h1 className="creator">Made by Chukroid</h1>
     <div className="main-wrapper">
-      <TodoTextBox onSubmit={addTodo}/> {/* sends the addTodo function to the components, this are known as prompts */}
+      <TodoTextBox onSubmit={addTodo} allTags={tagList}/> {/* sends the addTodo function to the components, this are known as prompts */}
       <div className="line"></div>
-      <TodoList todos={todolist} toggletodo={toggletodo} deletetodo={deletetodo}/>
+      <TodoList todos={todolist} allTags={tagList} toggletodo={toggletodo} deletetodo={deletetodo}/>
     </div>
     </>
   )

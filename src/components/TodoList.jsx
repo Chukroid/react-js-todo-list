@@ -1,15 +1,13 @@
-import TodoItem from "./TodoItem"
+import TodoListCategory from "./TodoListCategory"
 
-export default function TodoList({ todos, ...rest }){
+export default function TodoList({ todos, allTags, ...rest }){
     return (
         <>
-        <ul className="todo-list">
-            {todos.map(todo => { // function used to iterate in the todos, since todos is an array
-                return (
-                    <TodoItem todoitem={todo} key={todo.id} otherfuncs={rest}/>
-                )
-            })}
-        </ul>
+        {allTags.map(tag => {
+            return (
+                <TodoListCategory tagvalue={tag} key={tag.value} todos={todos} restf={rest} />
+            )
+        })}
         </>
     )
 }
