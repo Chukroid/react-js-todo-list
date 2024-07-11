@@ -9,7 +9,6 @@ export default function TodoItem({ todoitem, otherfuncs }){
                     onClick={() => otherfuncs.deletetodo(todoitem.id)}
                 ><i className="bi bi-trash-fill"></i></button>
             </div>
-            <div className="item-bg"></div>
         </li>
         </>
     )

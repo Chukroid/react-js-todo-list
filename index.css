@@ -130,7 +130,7 @@ body {
 }
 
 .line {
-    margin: 30px 0px;
+    margin: 15px 0px;
     height: 1px;
     border-radius: 100px;
     background-color: var(--darkGray);
@@ -145,6 +145,22 @@ body {
 .todo-list > p {
     color: var(--lightgray);
 }
+.todo-item {
+    position: relative;
+}
+.todo-item:hover::before {
+    content: "";
+    position: absolute;
+    width: 103%;
+    height: 150%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--darkGray);
+    opacity: 0.5;
+    border-radius: 5px;
+    z-index: 2;
+}
 .todo-item > .item-info {
     flex-flow: row;
     margin-bottom: 20px;
@@ -154,9 +170,11 @@ body {
     gap: 10px;
     font-weight: 100;
     padding: 1px 0;
+    z-index:  3;
 }
 .todo-item > .item-info > label {
     width: 100%;
+    z-index:  3;
 }
 .todo-completed {
     margin: 0;
@@ -171,6 +189,7 @@ body {
     outline: none;
     background-color: var(--lightgray);
     cursor: pointer;
+    z-index:  3;
 }
 .todo-completed:checked {
     background: url(images/tick.png);
@@ -189,6 +208,7 @@ body {
     outline: none;
     padding: 0;
     cursor: pointer;
+    z-index:  3;
 }
 .todo-delete > i {
     font-size: large;
