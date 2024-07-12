@@ -182,31 +182,39 @@ body {
     padding: 1px 0;
     z-index:  3;
 }
-.todo-item > .item-info > label {
+.todo-title {
     width: 100%;
     z-index:  3;
+    transition: all 0.2s;
+}
+.item-info > input[type="checkbox"] {
+    display: none;
 }
 .todo-completed {
     margin: 0;
     height: 21px;
     width: 23px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
     border: 1px solid var(--darkGray);
     border-radius: 3px;
     outline: none;
     background-color: var(--lightgray);
     cursor: pointer;
     z-index:  3;
+    transition: background-color 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.todo-completed:checked {
-    background: url(images/tick.png);
-    background-size: 70% 60%;
-    background-position: center;
+.todo-completed > i {
+    opacity: 0;
+    font-size: 1.3rem;
+    transition: opacity 0.1s;
+}
+.item-info > input[type="checkbox"]:checked + .todo-completed {
     background-color: var(--purple);
-    background-repeat: no-repeat;
+}
+.item-info > input[type="checkbox"]:checked + .todo-completed > i {
+    opacity: 1;
 }
 .striked {
     text-decoration: line-through;
@@ -219,10 +227,12 @@ body {
     padding: 0;
     cursor: pointer;
     z-index:  3;
+    transition: all 0.2s;
 }
 .todo-delete > i {
     font-size: large;
     color: var(--lightgray);
+    transition: all 0.2s;
 }
 .todo-delete > i:hover {
     color: var(--red);
@@ -231,5 +241,4 @@ body {
 .todo-delete:hover {
     rotate: -20deg;
     scale: 1.2;
-    transition: all 0.2s;
 }
