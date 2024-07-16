@@ -130,23 +130,6 @@ body {
 .custom-select-list > a > label {
     pointer-events: none;
 }
-/* .top-part > select {
-    width: 40%;
-    padding: 7px 13px;
-    background-color: var(--purple);
-    border: none;
-    border-radius: 5px;
-    color: #ffffff;
-    font-weight: 600;
-    font-family: inherit;
-    outline: none;
-}
-.top-part > select:hover {
-    background-color: var(--darkerpurple);
-}
-.top-part > select > option {
-    background-color: var(--darkGray);
-} */
 .todo-form-description {
     display: flex;
     align-items: center;
@@ -216,6 +199,9 @@ body {
     padding: 0;
 }
 .todo-list > p {
+    display: flex;
+    gap: 1rem;
+    padding: 0 0.3rem;
     color: var(--lightgray);
 }
 .todo-item {

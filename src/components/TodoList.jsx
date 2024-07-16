@@ -8,9 +8,9 @@ export default function TodoList({ todos, allTags, ...rest }){
         return (
             <>
             {todos.length === 0 && ""}
-            {allTags.map(tag => {
+            {Object.entries(allTags).map( ([key,value]) => {
                 return (
-                    <TodoListCategory tagvalue={tag} key={tag.value} todos={todos} restf={rest} />
+                    <TodoListCategory tagvalue={value} key={key} tablekey={key} todos={todos} restf={rest} />
                 )
             })}
             </>

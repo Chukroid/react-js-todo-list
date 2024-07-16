@@ -1,20 +1,20 @@
 import TodoItem from "./TodoItem"
 
-export default function TodoListCategory({ tagvalue, todos, restf }){
+export default function TodoListCategory({ tagvalue, tablekey, todos, restf }){
     let newtodos;
     
-    if (tagvalue.value === "personal"){
-        newtodos = todos.filter(ftodo => ftodo.tag == null || ftodo.tag === tagvalue.value)
+    if (tablekey === "personal"){
+        newtodos = todos.filter(ftodo => ftodo.tag == null || ftodo.tag === tablekey)
     }else{
-        newtodos = todos.filter(ftodo => ftodo.tag === tagvalue.value)
+        newtodos = todos.filter(ftodo => ftodo.tag === tablekey)
     }
 
     if (newtodos.length > 0){
         return (
 
             <>
-            <ul className="todo-list" key={tagvalue.value}>
-                    <p>{tagvalue.Text}</p>
+            <ul className="todo-list" key={tablekey}>
+                    <p><i className={tagvalue.TagIconClass}></i>{tagvalue.TagText}</p>
                     {
                         newtodos.map(todo => { // function used to iterate in the todos, since todos is an array
                             return (
