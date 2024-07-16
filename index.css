@@ -24,21 +24,20 @@ body {
     background-size: cover;
 }
 #root {
-    margin: auto;
+    max-width: 640px;
+    margin-right: auto;
+    margin-left: auto;
     display: flex;
     flex-flow: column;
     align-items: center;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
+    padding: 0;
     background-color: hsla(0, 0.00%, 10.67%, 0);
     font-weight: 600;
-    width: 50%;
+    width: 100%;
 }
 .creator {
     text-align: center;
-    font-size: medium;
+    font-size: 1rem;
     margin-bottom: 5%;
     color: inherit;
 }
@@ -246,4 +245,119 @@ body {
 .todo-delete:hover {
     rotate: -20deg;
     scale: 1.2;
+}
+
+@media (max-width: 750px) {
+    #root {
+        max-width: 475px;
+    }
+    .creator {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 620px) {
+    #root {
+        max-width: 440px;
+    }
+}
+@media (max-width: 550px) {
+    #root {
+        max-width: 380px;
+    }
+    .main-wrapper {
+        font-size: 0.8rem;
+        padding: 30px 30px;
+    }
+    .top-part > select {
+        width: 42%;
+        padding: 2px 8px;
+    }
+}
+@media (max-width: 480px) {
+    #root {
+        max-width: 300px;
+    }
+    .main-wrapper {
+        font-size: 0.75rem;
+        padding: 25px 25px;
+    }
+    .form-wrapper > .top-part {
+        gap: 0.7rem;
+        margin-bottom: 10px;
+    }
+    .todo-form-description {
+        padding: 0.4rem;
+    }
+    .todo-form-description > input {
+        font-size: inherit;
+    }
+    .top-part > select {
+        padding: 0.45rem;
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+    .line {
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 400px) {
+    body {
+        margin: 0;
+        padding: 0px 1.5rem;
+        background-image: radial-gradient(circle,var(--gray), var(--darkerGray));
+    }
+    #root {
+        width: 100%;
+        margin: auto;
+    }
+    .creator {
+        font-size: 0.7rem;
+        color: var(--lightgray);
+        align-self: flex-end;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+    .main-wrapper {
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+    .line {
+        display: none;
+    }
+    .todo-list {
+        width: 100%;
+        margin-bottom: 0.8rem;
+    }
+    .todo-list > p {
+        font-size: 1.2rem;
+        color: var(--textcolor);
+        margin-bottom: 1rem;
+    }
+    .todo-completed {
+        height: 17px;
+        width: 18px;
+    }
+    .todo-delete > i {
+        font-size: medium;
+    }
+    #tag-select {
+        color: transparent;
+        width: 18%;
+        position: relative;
+    }
+    #tag-select::after {
+        content: "\F229";
+        width: 20px;
+        height: 20px;
+        justify-content: flex-end;
+        position: absolute;
+        font-family: "bootstrap-icons";
+        color: var(--textcolor);
+    }
+    #tag-select > option {
+        color: var(--textcolor);
+    }
 }
