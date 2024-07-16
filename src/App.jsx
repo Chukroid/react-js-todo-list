@@ -8,12 +8,12 @@ export default function App(){
     if (storagevalue == null) return []
     return JSON.parse(storagevalue)
   }) //gets the todolist which is the input text and the setnewitem function to be called to set it
-  const tagList = [
-    {value:"personal",Text:"Personal"},
-    {value:"work",Text:"Work"},
-    {value:"school",Text:"School"},
-    {value:"hobby",Text:"Hobby"},
-  ]
+  const tagList = {
+    "personal": {TagIconClass:"bi bi-person-fill",TagText:"Personal"},
+    "work": {TagIconClass:"bi bi-briefcase-fill",TagText:"Work"},
+    "school": {TagIconClass:"bi bi-mortarboard-fill",TagText:"School"},
+    "hobby": {TagIconClass:"bi bi-palette-fill",TagText:"Hobby"},
+  }
 
 
   useEffect(() => { // anytime the todolist updates, it should automatically update the local storage 
@@ -57,7 +57,7 @@ export default function App(){
     <div className="main-wrapper">
       <TodoTextBox onSubmit={addTodo} allTags={tagList}/> {/* sends the addTodo function to the components, this are known as prompts */}
       <div className="line"></div>
-      <TodoList todos={todolist} allTags={tagList} toggletodo={toggletodo} deletetodo={deletetodo}/>
+      {/* <TodoList todos={todolist} allTags={tagList} toggletodo={toggletodo} deletetodo={deletetodo}/> */}
     </div>
     </>
   )
