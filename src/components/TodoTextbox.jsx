@@ -24,13 +24,6 @@ export default function TodoTextBox({ onSubmit, allTags }){
                     <input placeholder="Add a new Todo..." autoComplete="off" type="text" id="item" value={newitem} onChange={e => setNewItem(e.target.value)}/>
                 </div>
                 <CustomSelect list={allTags} startingVal={allTags[newtag]} setTag={setNewTag}/>
-                {/* <select name="tags" id="tag-select" defaultValue={newtag} onChange={e => setNewTag(e.target.value)} required>
-                    {allTags.map(tag => {
-                        return (
-                            <option value={tag.value} key={tag.value}>{tag.Text}</option>
-                        )
-                    })}
-                </select> */}
             </div>
             <button>ADD TODO</button>
         </form>
