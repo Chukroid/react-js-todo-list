@@ -79,6 +79,9 @@ body {
     cursor: pointer;
     z-index: 10;
 }
+.mobile-tag-view {
+    display: none;
+}
 .custom-select:hover{
     background-color: var(--darkerpurple);
 }
@@ -394,6 +397,12 @@ body {
     }
     .custom-select-main {
         display: none;
+    }
+    .custom-select > i {
+       display: none;
+    }
+    .mobile-tag-view {
+        display: block;
     }
     .custom-select-list {
         width: 230%;

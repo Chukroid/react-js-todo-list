@@ -33,6 +33,7 @@ export default function CustomSelect({ list,startingVal,setTag }){
                 <label>{startingVal.TagText}</label>
             </div>
             <i className="bi bi-caret-down-fill"></i>
+            <div className="mobile-tag-view "><i className={startingVal.TagIconClass}></i></div>
             <div className="custom-select-list">
                 {Object.entries(list).map( ([key,value]) => {
                     return (
