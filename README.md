@@ -18,7 +18,7 @@ Make sure you have Node.js and npm installed on your machine.
 Installation
 Clone the repo
 ```
-git clone https://github.com/your-username/react-todo-app.git
+git clone https://github.com/Chukroid/react-js-todo-list
 ```
 Install NPM packages
 ```
