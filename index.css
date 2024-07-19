@@ -3,6 +3,7 @@
     --darkerpurple: #363286;
 
     --textcolor: #ffffff;
+    --textcolor2: #ffffff93;
     --red: #ff6a6a;
 
     --gray: #2c2c2c;
@@ -342,15 +343,16 @@ body {
         margin-bottom: 5px;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     body {
         margin: 0;
         padding: 0px 1.5rem;
         background-image: radial-gradient(circle,var(--gray), var(--darkerGray));
     }
     #root {
+        max-width: none;
         width: 100%;
-        margin: auto;
+        margin: 0;
     }
     .creator {
         font-size: 0.7rem;
@@ -378,7 +380,7 @@ body {
     .todo-list > p {
         font-size: 1.2rem;
         color: var(--textcolor);
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
     .todo-completed {
         height: 17px;
@@ -404,6 +406,13 @@ body {
     }
     .form-wrapper > button:hover {
         background-color: var(--purple);
+    }
+    .todo-item {
+        font-size: 1rem;
+    }
+    .todo-title {
+        font-weight: 100;
+        color: var(--textcolor2);
     }
     
 }
