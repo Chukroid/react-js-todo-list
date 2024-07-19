@@ -18,7 +18,6 @@ export default function TodoTextBox({ onSubmit, allTags }){
         <>
         <form onSubmit={handlesubmit} className="form-wrapper">
             {/*setting the value of the textbox to newitem and setting its change event to the setnewitem function */}
-            <p>Selected Tag:  <i className={allTags[newtag].TagIconClass}></i>{` ${allTags[newtag].TagText}`}</p>
             <div className="top-part">
                 <div className="todo-form-description">
                     <i className="bi bi-body-text"></i>
