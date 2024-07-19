@@ -397,7 +397,9 @@ body {
     }
     .custom-select-list {
         width: 230%;
-        left: -50%;
+        left: -200%;
+        top: 250%;
+        scale: 1.7;
     }
     .form-wrapper > button {
         background-color: var(--lightgray);
@@ -418,6 +420,6 @@ body {
 }
 @media (max-width: 370px){
     .custom-select-list {
-        left: -95%;
+        left: -200%;
     }
 }
